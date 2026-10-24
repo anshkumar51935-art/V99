@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff0f7"><meta name="color-scheme" content="light"><title>A Little Surprise for Mansi 💗</title>
+<meta name="description" content="A cute, silent, pink-and-lavender birthday surprise journey for Mansi.">
+<style>
+:root{--pink:#ff8dbd;--pink2:#ffd5e7;--lav:#c8b7ff;--ink:#61465e;--cream:#fffafc}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:var(--ink)}
+body{overflow-x:hidden;background:radial-gradient(ellipse at 10% 15%,#fff 0,transparent 36%),radial-gradient(ellipse at 90% 80%,#e8ddff 0,transparent 40%),linear-gradient(140deg,#fff0f7,#f4edff 55%,#fff7fb)}
+button{font:inherit;cursor:pointer;border:1px solid #f1c8df;border-radius:999px;padding:13px 23px;background:linear-gradient(135deg,#fff,#fff0f7);color:#80536e;box-shadow:0 7px 20px #dba8c933;transition:transform .25s,box-shadow .25s}
+button:active{transform:scale(.96)}button:hover{box-shadow:0 10px 25px #dba8c966;transform:translateY(-2px)}button:disabled{opacity:.48;cursor:not-allowed;transform:none;box-shadow:none}
+#app{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:20px 14px;position:relative;isolation:isolate}
+#app:before,#app:after{content:"";position:fixed;width:250px;height:250px;border-radius:50%;filter:blur(45px);opacity:.36;z-index:-1;animation:orb 9s ease-in-out infinite alternate}
+#app:before{background:#ffc7df;left:-110px;top:7%}#app:after{background:#cbbaff;right:-100px;bottom:4%;animation-delay:-4s}
+@keyframes orb{to{transform:translate(35px,-22px) scale(1.2)}}
+.scene{display:none;width:min(100%,650px);min-height:min(790px,calc(100svh - 30px));text-align:center;align-items:center;justify-content:center;flex-direction:column;padding:clamp(18px,4vw,34px);position:relative;border:1px solid #fff9;border-radius:32px;background:#ffffffa8;backdrop-filter:blur(14px);box-shadow:0 25px 75px #8f6c9b20;overflow:hidden}
+.scene.active{display:flex;animation:sceneIn .75s cubic-bezier(.2,.8,.2,1) both}
+@keyframes sceneIn{from{opacity:0;transform:translateY(18px) scale(.975);filter:blur(5px)}to{opacity:1;transform:none;filter:none}}
+h1,h2{font-family:"Brush Script MT","Segoe Script",cursive;font-weight:700;line-height:1.08;margin:12px 0;color:#c45b91;text-shadow:0 2px 0 white,0 0 20px #ffc5e3}
+h1{font-size:clamp(2.5rem,9vw,4.4rem)}h2{font-size:clamp(2rem,7vw,3.3rem)}
+p{line-height:1.7;font-size:clamp(1rem,3.7vw,1.12rem);max-width:490px;margin:10px auto}
+.eyebrow{letter-spacing:.15em;text-transform:uppercase;font-size:.72rem;color:#a88acb;font-weight:800}
+.hero-art{width:min(94%,450px);max-height:310px;object-fit:contain;filter:drop-shadow(0 15px 18px #ad8cae28);animation:bob 3.4s ease-in-out infinite}
+.scene-bears{display:block;width:min(78%,300px);max-height:180px;object-fit:contain;margin:4px auto 8px;filter:drop-shadow(0 10px 15px #ad8cae30);animation:bearBob 2.8s ease-in-out infinite}
+.compact-bears{width:min(62%,220px);max-height:120px;margin:0 auto 4px}
+@keyframes bearBob{0%,100%{transform:translateY(0) rotate(-1deg) scale(1)}50%{transform:translateY(-7px) rotate(1deg) scale(1.015)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(1deg)}}
+.progress{display:flex;gap:7px;justify-content:center;margin:0 0 14px;flex-wrap:wrap}
+.progress span{font-size:18px;opacity:.3;transform:scale(.85);transition:.3s}.progress span.done{opacity:1;transform:scale(1.08);filter:drop-shadow(0 0 5px #ff9ecb)}
+.controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.subtle{font-size:.82rem;color:#a28ba5}
+.spark{position:fixed;pointer-events:none;z-index:8;animation:sparkFly 2.5s ease-out forwards;font-size:var(--size,18px)}
+@keyframes sparkFly{0%{transform:translate(0,20px) scale(.2) rotate(0);opacity:0}20%{opacity:1}100%{transform:translate(var(--dx),-110vh) scale(1.2) rotate(300deg);opacity:0}}
+
+/* Scene-specific bear-art motion: gentle, silent, and mobile friendly. */
+.pose-welcome{animation:welcomeSway 3.6s ease-in-out infinite;transform-origin:50% 85%}
+.pose-celebrate{animation:celebrateBounce 1.45s ease-in-out infinite}
+.pose-wish{animation:wishFloat 2.8s ease-in-out infinite}
+.pose-cake{animation:cakePeek 2.5s ease-in-out infinite;transform-origin:50% 100%}
+.pose-gift{animation:giftCurious 2.2s ease-in-out infinite;transform-origin:50% 90%}
+.pose-letter{animation:letterWarm 3.2s ease-in-out infinite}
+.pose-ending{animation:endingSway 4s ease-in-out infinite;transform-origin:50% 85%}
+@keyframes welcomeSway{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-8px) rotate(1.5deg)}}
+@keyframes celebrateBounce{0%,100%{transform:translateY(0) scale(1)}30%{transform:translateY(-13px) scale(1.025)}60%{transform:translateY(-3px) scale(1.005)}}
+@keyframes wishFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-6px) rotate(1deg)}}
+@keyframes cakePeek{0%,100%{transform:translateY(0) rotate(0)}35%{transform:translateY(-5px) rotate(-1.5deg)}70%{transform:translateY(-2px) rotate(1deg)}}
+@keyframes giftCurious{0%,100%{transform:translateX(0) rotate(0)}25%{transform:translateX(-3px) rotate(-1deg)}75%{transform:translateX(3px) rotate(1deg)}}
+@keyframes letterWarm{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-4px) scale(1.01)}}
+@keyframes endingSway{0%,100%{transform:translateY(0) rotate(1deg)}50%{transform:translateY(-9px) rotate(-1deg)}}
+@media(prefers-reduced-motion:reduce){.pose-welcome,.pose-celebrate,.pose-wish,.pose-cake,.pose-gift,.pose-letter,.pose-ending{animation:none}}
+
+
+/* V8 polish: scene-specific motion accents and accessible focus states */
+button:focus-visible,.envelope-wrap:focus-visible,.cake-area:focus-visible,.gift:focus-visible{outline:3px solid #b9a5ff;outline-offset:4px}
+button:focus-visible{box-shadow:0 0 0 5px #e8ddff}
+[role="button"]{ -webkit-tap-highlight-color: transparent; touch-action: manipulation }
+@media(max-height:700px){.scene{min-height:calc(100svh - 18px);padding:16px}.hero-art{max-height:220px}.envelope-wrap{transform:scale(.88);margin:8px auto 0}.wish-card{min-height:230px}.wish-balloon{width:165px;height:175px}}
+.hero-art,.scene-bears{will-change:transform}
+#s2 .hero-art{animation:celebrateBounce 1.45s ease-in-out infinite}
+#s3 .scene-bears{animation:wishFloat 2.8s ease-in-out infinite}
+#s5 .scene-bears{animation:cakePeek 2.5s ease-in-out infinite;transform-origin:50% 100%}
+#s6 .scene-bears{animation:giftCurious 2.2s ease-in-out infinite;transform-origin:50% 90%}
+#s7 .scene-bears{animation:letterWarm 3.2s ease-in-out infinite}
+#s8 .hero-art{animation:endingSway 4s ease-in-out infinite;transform-origin:50% 85%}
+
+/* animated envelope */
+.envelope-wrap{width:min(78vw,310px);height:230px;position:relative;margin:25px auto 5px;perspective:800px;cursor:pointer;filter:drop-shadow(0 18px 15px #c57ca72b)}
+.envelope{position:absolute;bottom:0;width:100%;height:175px;background:linear-gradient(135deg,#ffb9d6,#f58dbb);border-radius:8px 8px 18px 18px;overflow:visible}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 49%,#ed7eae 50%) left/50% 100% no-repeat,linear-gradient(215deg,transparent 49%,#ffcee2 50%) right/50% 100% no-repeat;z-index:3}
+.flap{position:absolute;top:-1px;left:0;width:100%;height:110px;background:#ffc8df;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s;z-index:4;filter:drop-shadow(0 3px 2px #b94e8133)}
+.letter{position:absolute;left:7%;width:86%;height:145px;bottom:10px;border-radius:10px;background:#fffdfd;padding:18px 12px;color:#b75d91;font-size:1.1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 8px #7d3b5b22;transition:transform 1s cubic-bezier(.2,.8,.2,1);z-index:2}
+.seal{position:absolute;z-index:5;left:50%;top:92px;transform:translateX(-50%);background:#fff0f7;border:3px solid #ff9cc7;border-radius:50%;width:52px;height:52px;display:grid;place-items:center;font-size:24px;transition:.5s}
+.envelope-wrap.open .flap{transform:rotateX(180deg);z-index:1}.envelope-wrap.open .letter{transform:translateY(-125px) rotate(-2deg)}.envelope-wrap.open .seal{opacity:0;transform:translateX(-50%) scale(.4)}
+/* birthday reveal */
+.balloons{height:210px;width:100%;position:relative;margin:0 auto}
+.balloon{position:absolute;bottom:-15px;width:60px;height:76px;border-radius:50% 50% 45% 45%;background:var(--c);box-shadow:inset -9px -8px 0 #0000000b,inset 8px 8px 0 #ffffff80;animation:balloonUp 3.3s cubic-bezier(.2,.65,.3,1) forwards;left:var(--x);animation-delay:var(--delay);opacity:0}
+.balloon:before{content:"";position:absolute;bottom:-8px;left:25px;border:7px solid transparent;border-bottom:0;border-top:10px solid var(--c)}
+.balloon:after{content:"";position:absolute;top:75px;left:29px;height:100px;border-left:1px solid #b99cae;transform-origin:top;animation:stringSwing 2s ease-in-out infinite alternate}
+@keyframes balloonUp{0%{opacity:0;transform:translateY(130px) scale(.5)}15%{opacity:1}100%{opacity:1;transform:translateY(-175px) scale(1)}}
+@keyframes stringSwing{to{transform:rotate(9deg)}}
+.reveal-title{opacity:0;animation:titlePop 1s ease-out 1.5s forwards}
+@keyframes titlePop{0%{opacity:0;transform:scale(.3) rotate(-8deg);filter:blur(10px)}65%{opacity:1;transform:scale(1.12) rotate(2deg);filter:blur(0);text-shadow:0 0 28px #ff82bb}100%{opacity:1;transform:scale(1)}}
+/* wish balloon */
+.wish-card{width:min(100%,440px);min-height:285px;display:grid;place-items:center;position:relative;margin:8px auto}
+.wish-balloon{width:190px;height:205px;border-radius:52% 48% 50% 50%;background:linear-gradient(140deg,#fff,#ffd2e7 65%,#f7acd0);box-shadow:inset -15px -10px 0 #eaa0c233,inset 14px 10px 0 #fff;display:flex;align-items:center;justify-content:center;padding:25px;position:relative;animation:wishFloat 2.8s ease-in-out infinite}
+.wish-balloon:after{content:"";position:absolute;bottom:-11px;border:10px solid transparent;border-bottom:0;border-top:15px solid #f7acd0}
+.wish-balloon p{font-size:.98rem;font-weight:650;line-height:1.5}
+@keyframes wishFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+.wish-balloon.pop{animation:pop .4s forwards}@keyframes pop{to{transform:scale(1.5);opacity:0;filter:blur(8px)}}
+.wish-num{font-size:.8rem;color:#a487b6;font-weight:800;letter-spacing:.1em}
+/* cake */
+.cake-area{position:relative;width:260px;height:240px;margin:14px auto;cursor:pointer;animation:bob 3s infinite}
+.cake-plate{position:absolute;bottom:15px;left:8px;width:244px;height:28px;border-radius:50%;background:#dfc8ee;box-shadow:0 8px 0 #b9a0d2}
+.cake-body{position:absolute;bottom:39px;left:38px;width:184px;height:100px;border-radius:18px 18px 24px 24px;background:linear-gradient(90deg,#f8a5cc,#ffd3e5 40%,#f8a5cc);box-shadow:inset -12px 0 #e88bb8}
+.cake-body:before{content:"";position:absolute;top:-22px;left:0;width:100%;height:42px;border-radius:50%;background:#fff0f8;border-bottom:7px dotted #ffb2d5}
+.candle{position:absolute;bottom:160px;width:12px;height:43px;border-radius:5px;background:repeating-linear-gradient(135deg,#fff 0 7px,#ff9bc6 7px 13px);z-index:3}
+.candle:nth-child(2){left:84px}.candle:nth-child(3){left:123px;bottom:172px}.candle:nth-child(4){left:162px}
+.flame{position:absolute;top:-17px;left:1px;width:10px;height:16px;background:#ffd76b;border-radius:60% 40% 60% 40%;box-shadow:0 0 15px #ffc34e;animation:flame 0.7s infinite alternate}
+@keyframes flame{to{transform:scale(.75) rotate(8deg);opacity:.75}}
+.cake-area.blown .flame{display:none}.cake-area.blown{animation:cakeCelebrate .6s ease-in-out 2}@keyframes cakeCelebrate{50%{transform:scale(1.08) rotate(2deg)}}
+.gift{width:210px;height:175px;position:relative;margin:38px auto 20px;cursor:pointer;animation:bob 3s infinite;filter:drop-shadow(0 15px 12px #bd77a533)}
+.gift-box{position:absolute;bottom:0;left:10px;width:190px;height:120px;background:linear-gradient(100deg,#ff8fbd,#ffc5df);border-radius:9px;box-shadow:inset -12px 0 #df78a8}
+.gift-box:before{content:"";position:absolute;left:77px;top:0;width:35px;height:100%;background:#fff0f7}
+.gift-lid{position:absolute;left:0;top:34px;width:210px;height:35px;background:#ffb2d2;border-radius:7px;z-index:2;transition:transform .8s}
+.gift-bow{position:absolute;top:2px;left:75px;width:60px;height:38px;border:10px solid #fff1f8;border-radius:60% 60% 15% 60%;transform:rotate(-20deg);z-index:3}
+.gift-bow:after{content:"";position:absolute;width:60px;height:38px;border:10px solid #fff1f8;border-radius:60% 60% 60% 15%;left:10px;top:-4px;transform:rotate(40deg)}
+.gift.open .gift-lid{transform:translate(18px,-55px) rotate(18deg)}.gift.open .gift-bow{transform:translate(20px,-58px) rotate(35deg);opacity:.4}
+.final-letter{background:linear-gradient(145deg,#fff,#fff5fa);border:1px solid #f5d5e7;border-radius:18px;padding:20px;max-height:42vh;overflow:auto;text-align:left;box-shadow:0 10px 30px #b28ab51c}
+@media(max-height:760px){.scene{min-height:calc(100svh - 20px);padding:14px}.hero-art{max-height:220px}.scene-bears{max-height:115px}.compact-bears{max-height:85px}.envelope-wrap{margin:10px auto;height:200px}.balloons{height:160px}.cake-area{transform:scale(.85);margin:0 auto}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* V16: cleaner mobile-first journey chrome */
+:root{--ink:#5c435b;--pink:#ff8fbd;--lav:#c8b8ff}
+body{min-height:100svh}
+#app{padding:clamp(10px,3vw,24px);padding-top:84px}
+.journey-bar{position:fixed;z-index:20;top:12px;left:50%;transform:translateX(-50%);width:min(calc(100% - 24px),610px);padding:10px 14px 11px;border:1px solid #fff;background:#ffffffb8;backdrop-filter:blur(16px);border-radius:20px;box-shadow:0 8px 28px #8f6c9b18}
+.journey-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.74rem;font-weight:800;color:#9876a5;letter-spacing:.04em;margin-bottom:8px}
+.journey-name{color:#bf6798}
+.journey-track{height:6px;background:#eee5f6;border-radius:99px;overflow:hidden}
+.journey-fill{height:100%;width:12.5%;border-radius:99px;background:linear-gradient(90deg,#ff9ec9,#c7b5ff);transition:width .45s ease}
+.scene{width:min(100%,650px);min-height:min(760px,calc(100svh - 112px));padding:clamp(18px,4vw,34px);border-radius:30px}
+.scene.active{animation:sceneIn .55s cubic-bezier(.2,.8,.2,1) both}
+.eyebrow{margin-bottom:3px}
+.controls{gap:10px;margin-top:18px}
+button{min-height:46px;font-weight:750;letter-spacing:.01em}
+button:focus-visible,.envelope-wrap:focus-visible,.cake-area:focus-visible,.gift:focus-visible{outline:3px solid #8e79d8;outline-offset:4px}
+.scene-bears{max-width:280px}
+.final-letter{scrollbar-width:thin;scrollbar-color:#d8b6e8 #fff4fa}
+.scene-footer{font-size:.72rem;color:#a58da9;margin-top:14px;letter-spacing:.04em}
+@media(max-width:420px){#app{padding-left:10px;padding-right:10px;padding-top:78px}.journey-bar{top:8px;width:calc(100% - 16px);padding:9px 12px}.scene{min-height:calc(100svh - 92px);padding:19px 15px;border-radius:25px}.hero-art{max-height:255px}.scene-bears{max-height:135px}.compact-bears{max-height:105px}.wish-card{min-height:245px}.wish-balloon{width:174px;height:184px}.controls button{padding:12px 16px;font-size:.94rem}.final-letter{max-height:38svh;padding:16px}}
+@media(max-height:700px){#app{padding-top:72px}.scene{min-height:auto;max-height:calc(100svh - 84px);overflow-y:auto}.hero-art{max-height:175px}.scene-bears{max-height:90px}.compact-bears{max-height:70px}.balloons{height:110px}.wish-card{min-height:205px}.wish-balloon{width:150px;height:160px}.final-letter{max-height:30svh}}
+@media(prefers-reduced-motion:reduce){.journey-fill{transition:none}.scene.active{animation:none}}
+
+
+/* V18: private-feeling countdown/passcode gate */
+#gate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:18px;background:radial-gradient(ellipse at 12% 15%,#fff 0,transparent 38%),radial-gradient(ellipse at 88% 82%,#ded2ff 0,transparent 40%),linear-gradient(140deg,#ffeaf4,#f0eaff 58%,#fff7fb);overflow:auto}
+#gate[hidden]{display:none!important}.gate-card{width:min(100%,520px);padding:clamp(22px,5vw,38px);text-align:center;border:1px solid #fff;border-radius:30px;background:#ffffffd9;box-shadow:0 24px 70px #8f6c9b24;backdrop-filter:blur(14px)}
+.gate-icon{font-size:44px;animation:gateFloat 2.8s ease-in-out infinite}.gate-card h1{font-size:clamp(2.4rem,9vw,3.8rem);margin:8px 0 12px}.gate-sub{color:#8f7096}.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:20px 0}.countdown div{padding:12px 4px;border:1px solid #f5d8e9;border-radius:16px;background:linear-gradient(145deg,#fff,#fff0f7)}.countdown strong{display:block;font-size:clamp(1.35rem,5vw,2rem);color:#bf6298;font-variant-numeric:tabular-nums}.countdown span{font-size:.72rem;color:#9879a3}.gate-note{font-size:.95rem}.gate-card form{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-top:14px}.gate-card input{width:130px;min-height:48px;text-align:center;letter-spacing:.35em;font-size:1.2rem;border:1px solid #e8c5e3;border-radius:14px;background:#fff;padding:10px;color:#80536e;outline-color:#b9a5ff}.gate-card form button{min-height:48px}.gate-footer{font-size:.68rem;letter-spacing:.12em;color:#a58da9;margin-top:22px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}#gateError{min-height:1.4em;color:#b44879;font-size:.86rem;margin:8px auto}body.locked{overflow:hidden}body.locked #app,body.locked .journey-bar{visibility:hidden}.memory-book{width:100%;max-width:480px;margin:8px auto}.memory-photo{height:clamp(160px,31vh,245px);border:2px dashed #d9bce8;border-radius:22px;background:linear-gradient(145deg,#fff5fa,#f0eaff);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#a68bb5;gap:8px;padding:18px;box-shadow:inset 0 0 0 7px #ffffff88}.memory-photo .camera{font-size:42px}.memory-photo small{font-size:.8rem}.memory-page-title{display:inline-block;padding:9px 24px;background:linear-gradient(100deg,#f6d7ed,#e4d9ff,#d8efff);border-radius:6px 18px 8px 18px;color:#95658f;font-size:1.2rem;font-weight:850;transform:rotate(-1deg);box-shadow:0 5px 0 #fff}.memory-message{max-width:420px}.wish-poster{width:min(100%,460px);min-height:250px;margin:8px auto;padding:20px 18px 16px;border-radius:24px;background:linear-gradient(145deg,#fff9fc,#f4edff);border:1px solid #fff;box-shadow:0 12px 28px #b28ab51a;position:relative;overflow:hidden}.wish-poster:before,.wish-poster:after{content:'✦  ♡  ✧';position:absolute;color:#d4b9e9;letter-spacing:.5em;font-size:15px}.wish-poster:before{top:10px;left:12px}.wish-poster:after{bottom:9px;right:12px}.wish-poster .wish-balloon{width:auto;height:auto;min-height:90px;max-width:390px;border-radius:20px;background:transparent;box-shadow:none;padding:12px 8px;animation:none}.wish-poster .wish-balloon:after{display:none}.wish-poster .wish-balloon p{font-size:1.04rem;line-height:1.65}.wish-poster .scene-bears{width:min(60%,220px);max-height:110px;margin:6px auto}.secret-star{position:absolute;right:18px;top:14px;border:0;background:transparent;box-shadow:none;padding:6px;font-size:19px;min-height:0;opacity:.72}.secret-message{display:none;padding:14px;border-radius:16px;background:#fff3fb;border:1px solid #f4d2e8;font-size:.95rem}.secret-message.show{display:block;animation:sceneIn .4s ease both}
+@keyframes gateFloat{50%{transform:translateY(-7px) rotate(4deg)}}
+@media(max-width:390px){.countdown{gap:5px}.countdown div{padding:10px 2px}.gate-card form{flex-direction:column}.gate-card input,.gate-card form button{width:100%}.wish-poster{padding:18px 12px}}
+
+
+/* Approved 10-card pastel poster wish design — flat 2D art only */
+#wishPoster{--card:#fff0f6;--brush:#ffc4dd;--accent:#b75d91;background:var(--card);width:min(100%,440px);min-height:clamp(410px,64svh,530px);padding:18px 20px 12px;border:3px solid #ffffffd9;border-radius:18px;box-shadow:0 9px 0 #b7a6cc30,0 16px 32px #9e7ca61b;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;position:relative;overflow:hidden;isolation:isolate;transition:background .35s}
+#wishPoster:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 18%,#fff9 0 2px,transparent 3px),radial-gradient(circle at 85% 25%,#fff9 0 3px,transparent 4px),radial-gradient(circle at 18% 78%,#fff8 0 3px,transparent 4px);background-size:38px 42px;z-index:-1;pointer-events:none}
+.wish-decor,.wish-bottom-decor{width:100%;display:flex;justify-content:space-between;color:var(--accent);font-size:20px;opacity:.82;letter-spacing:.18em;line-height:1.2}
+.wish-brush{width:fit-content;max-width:100%;margin:4px auto 13px;padding:8px 28px 10px;position:relative;isolation:isolate}
+.wish-brush:before{content:"";position:absolute;z-index:-1;inset:4px -4px 2px;background:var(--brush);border-radius:46% 16% 42% 18% / 35% 42% 30% 45%;transform:rotate(-2deg);box-shadow:9px 2px 0 -3px var(--brush),-8px -2px 0 -4px var(--brush)}
+#wishPoster .memory-page-title{background:transparent;box-shadow:none;border-radius:0;padding:0;color:#49374e;font-size:clamp(1.35rem,5vw,1.75rem);font-weight:850;transform:none;text-shadow:0 1px #fff8}
+.wish-message{font-size:clamp(1rem,3.8vw,1.15rem);line-height:1.65;font-weight:650;color:#27375f;max-width:370px;width:100%;margin:2px auto 6px;text-align:center;white-space:normal;overflow-wrap:anywhere}
+.wish-illustration{display:block;width:min(76%,260px);height:clamp(135px,24vh,190px);object-fit:contain;margin:auto auto 0;filter:none;animation:wishFloat 3s ease-in-out infinite;transform-origin:50% 90%}
+.wish-bottom-decor{margin-top:3px;font-size:17px}
+#wishPoster.wish-theme-0{--card:#fff0f6;--brush:#ffc2dc;--accent:#ed83b3}
+#wishPoster.wish-theme-1{--card:#e9e4ff;--brush:#c9bdff;--accent:#9383e9}
+#wishPoster.wish-theme-2{--card:#fff0f3;--brush:#ffcada;--accent:#ee8eaf}
+#wishPoster.wish-theme-3{--card:#e2f5ff;--brush:#b9e5ff;--accent:#65b9ee}
+#wishPoster.wish-theme-4{--card:#f0e9ff;--brush:#d4c2ff;--accent:#a18ae8}
+#wishPoster.wish-theme-5{--card:#fff7d9;--brush:#ffe7a0;--accent:#e8b84f}
+#wishPoster.wish-theme-6{--card:#e4fff3;--brush:#b9f0db;--accent:#65c6a4}
+#wishPoster.wish-theme-7{--card:#fff0e5;--brush:#ffc8b9;--accent:#ee987e}
+#wishPoster.wish-theme-8{--card:#eae8ff;--brush:#c9c6ff;--accent:#9c95ec}
+#wishPoster.wish-theme-9{--card:#fff0f7;--brush:#ffc4e2;--accent:#ee86c2}
+@media(max-width:420px){#wishPoster{min-height:clamp(390px,59svh,490px);padding:15px 14px 10px}.wish-message{line-height:1.55}.wish-illustration{width:min(80%,240px);height:clamp(125px,21vh,165px)}.wish-brush{margin-bottom:9px}}
+@media(max-height:700px){#wishPoster{min-height:360px;padding:12px 14px 8px}.wish-illustration{height:115px}.wish-message{font-size:.98rem;line-height:1.45}}
+
+
+/* Memory Album redesign only: premium pastel scrapbook / storybook */
+.memory-scene{background:radial-gradient(circle at 8% 8%,#fff 0,transparent 28%),linear-gradient(145deg,#fff9fc,#f5efff 58%,#fff5fb);border:1px solid #fff}
+.memory-scene h2{color:#765582;font-size:clamp(1.65rem,6vw,2.15rem);line-height:1.18;margin-bottom:8px}
+.memory-book{position:relative;width:100%;max-width:460px;margin:12px auto 4px;padding:12px;border-radius:24px;background:linear-gradient(135deg,#e9d9f4,#fff1f8 48%,#d9d2f4);box-shadow:0 15px 35px #85629c24,inset 0 0 0 1px #ffffffd9;overflow:hidden}
+.memory-ribbon{position:absolute;right:19px;top:-5px;z-index:4;width:33px;height:64px;padding-top:17px;color:#fff;text-align:center;background:linear-gradient(180deg,#f8a8cc,#d58ab9);clip-path:polygon(0 0,100% 0,100% 100%,50% 80%,0 100%);filter:drop-shadow(0 3px 4px #9c668a35)}
+.memory-cover-art[hidden]{display:none!important}.memory-cover-art{position:relative;min-height:clamp(340px,48vh,430px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:25px 18px 20px;border-radius:16px;border:1px solid #fff;background:radial-gradient(circle at 50% 45%,#fff 0,#fff8fc 43%,#f1e7ff 100%);box-shadow:inset 0 0 0 5px #fff9,inset 0 0 0 7px #e9d4f0;overflow:hidden;animation:memoryReveal .55s ease both}
+.memory-cover-art:before,.memory-cover-art:after{content:'✧　♡　✦';position:absolute;color:#d4b1dd;letter-spacing:.28em;font-size:18px}.memory-cover-art:before{top:22px;left:18px}.memory-cover-art:after{bottom:20px;right:14px}
+.cover-spark{position:absolute;color:#d5a5cf;font-size:30px;animation:memoryTwinkle 2.4s ease-in-out infinite}.cover-spark-a{right:20%;top:23%}
+.cover-polaroid{width:126px;padding:8px 8px 13px;background:#fff;transform:rotate(-7deg);box-shadow:0 8px 20px #9879a326;border:1px solid #f3e5f2;margin:0 0 15px 0}
+.cover-photo-placeholder{height:94px;display:grid;place-items:center;background:linear-gradient(135deg,#ffe8f3,#e9e2ff);color:#c58fbd;font-size:38px;border:1px dashed #d6b8dc}
+.cover-polaroid span{display:block;margin-top:7px;font-size:.68rem;color:#a78aab;font-family:Georgia,serif;font-style:italic}
+.cover-title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.8rem,7vw,2.4rem);line-height:1.08;color:#805d91;text-align:center;text-shadow:0 2px #fff;margin:2px auto 10px;max-width:320px}
+.cover-title em{font-size:.84em;color:#c078a6;font-weight:500}
+.cover-subtitle{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#aa88b6;text-align:center}
+.cover-doodles{margin-top:17px;color:#d39dc4;letter-spacing:.2em}
+.cover-duo{margin-top:13px;color:#a78ab0;font-size:.8rem;font-weight:750}
+.memory-inside{position:relative;min-height:clamp(340px,48vh,430px);padding:18px 13px 14px;border-radius:16px;background:repeating-linear-gradient(0deg,#fffdfd,#fffdfd 31px,#f7edf8 32px);border:1px solid #f0deef;box-shadow:inset 0 0 0 5px #fff9;animation:memoryPageTurn .42s ease both}
+.memory-inside[hidden]{display:none!important}
+.memory-inside:before{content:'♡';position:absolute;top:10px;right:15px;color:#dfb4d4;font-size:20px}
+.memory-inside .memory-page-title{display:block;width:fit-content;max-width:92%;margin:3px auto 13px;padding:8px 16px;background:#f6d9ed;border-radius:7px 16px 6px 15px;color:#8b6394;font-family:Georgia,serif;font-size:1.14rem;box-shadow:2px 3px 0 #e5c6e4;transform:rotate(-1deg)}
+.memory-inside .memory-photo{height:clamp(150px,25vh,205px);position:relative;border:9px solid #fff;border-bottom-width:27px;border-radius:3px;background:linear-gradient(140deg,#fff1f8,#ece5ff);box-shadow:0 7px 18px #9477a126,0 0 0 1px #ead9ec;transform:rotate(-1deg);color:#a989b3}
+.memory-inside .memory-photo:after{content:'photo goes here';position:absolute;bottom:-22px;left:0;right:0;text-align:center;font-family:Georgia,serif;font-size:.68rem;color:#ad91b4;font-style:italic}
+.memory-inside .memory-photo .camera{font-size:37px;color:#c99bc9}
+.memory-inside .memory-photo small{font-size:.75rem;text-align:center}
+.memory-message{max-width:360px;margin:18px auto 4px;color:#806e8d;font-family:Georgia,serif;font-size:.96rem;line-height:1.55;text-align:center}
+.memory-controls{margin-top:12px;gap:9px;flex-wrap:wrap}.memory-controls button{flex:1;min-width:115px}
+.memory-progress{margin:10px 0 0;color:#a187ad;font-size:.72rem}
+.memory-hearts{margin-top:6px;letter-spacing:.25em;color:#d4b4d9;font-size:.82rem}.memory-hearts .done{color:#cf77aa;text-shadow:0 0 8px #f5b9dd}
+@keyframes memoryReveal{from{opacity:0;transform:scale(.97) translateY(5px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes memoryPageTurn{from{opacity:.35;transform:perspective(800px) rotateY(-7deg)}to{opacity:1;transform:perspective(800px) rotateY(0)}}
+@keyframes memoryTwinkle{50%{transform:scale(1.18) rotate(12deg);opacity:.65}}
+@media(max-width:420px){.memory-book{padding:8px;border-radius:20px}.memory-cover-art,.memory-inside{min-height:clamp(320px,44vh,390px);padding-left:10px;padding-right:10px}.cover-polaroid{width:112px}.cover-photo-placeholder{height:82px}.memory-inside .memory-photo{height:clamp(140px,22vh,180px)}.memory-controls button{padding:10px 11px;font-size:.88rem}}
+@media(prefers-reduced-motion:reduce){.memory-cover-art,.memory-inside,.cover-spark{animation:none}}
+
+</style></head>
+<body>
+<section id="gate" aria-label="Birthday surprise lock">
+  <div class="gate-card">
+    <div class="eyebrow">a little surprise is waiting</div>
+    <div class="gate-icon">🎀</div>
+    <h1>A Little Surprise<br>for Mansi</h1>
+    <p class="gate-sub">Your birthday magic is getting ready… 💗</p>
+    <div class="countdown" aria-label="Countdown to November 13, 2026">
+      <div><strong id="cdDays">--</strong><span>days</span></div><div><strong id="cdHours">--</strong><span>hours</span></div><div><strong id="cdMinutes">--</strong><span>minutes</span></div><div><strong id="cdSeconds">--</strong><span>seconds</span></div>
+    </div>
+    <p class="gate-note">Enter the little secret code to open the surprise ✨</p>
+    <form id="passForm" onsubmit="event.preventDefault();unlockGate()"><label class="sr-only" for="passcode">Seven-digit passcode</label><input id="passcode" type="password" inputmode="numeric" pattern="[0-9]{7}" maxlength="7" autocomplete="off" placeholder="•••••••" aria-label="Seven-digit passcode" required><button type="submit">Unlock Surprise 💗</button></form>
+    <p id="gateError" role="status" aria-live="polite"></p><div id="resumeBox" hidden><p>Continue your saved surprise?</p><div class="controls"><button type="button" onclick="resumeJourney(true)">Continue ✨</button><button class="secondary" type="button" onclick="resumeJourney(false)">Start Again ↻</button></div></div>
+    <div class="gate-footer">A LITTLE BIRTHDAY MAGIC · NO SOUND</div>
+  </div>
+</section>
+
+<div class="journey-bar" aria-label="Birthday surprise progress">
+  <div class="journey-top"><span class="journey-name">♡ A LITTLE SURPRISE</span><span id="sceneCount">01 / 09</span><span>NO SOUND · JUST MAGIC ✨</span></div>
+  <div class="journey-track" role="progressbar" aria-label="Journey progress" aria-valuemin="1" aria-valuemax="9" aria-valuenow="1" id="journeyProgress"><div class="journey-fill" id="journeyFill"></div></div>
+</div>
+<main id="app">
+<section class="scene active" id="s0"><div class="eyebrow">a little surprise for</div><h1>Mansi 💗</h1><img class="hero-art pose-welcome" src="assets/pose-welcome.png" alt="Two cute plush bear friends in a friendly pose"><p>Mansi, ye chhoti si website maine tumhare birthday ko special banane ke liye banayi hai. 🥹🎀</p><div class="controls"><button onclick="go(1)">Let's Start ✨</button></div><div class="subtle">Made with lots of birthday wishes</div><div class="scene-footer">MADE WITH LOTS OF WISHES FOR MANSI ♡</div></section>
+<section class="scene" id="s1"><div class="eyebrow">a tiny note, just for you</div><h2>Open Your Surprise 💌</h2><p>Envelope par tap karo…</p><div class="envelope-wrap" id="env" role="button" tabindex="0" aria-label="Open the birthday envelope" onclick="openEnv()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openEnv()}"><div class="letter">Hey, birthday girl!<br>There's a little surprise waiting inside ✨</div><div class="envelope"><div class="flap"></div></div><div class="seal">💗</div></div><div class="controls"><button class="secondary" onclick="go(0)">← Back</button><button id="envNext" onclick="go(2)" disabled>Let's Begin ✨</button></div><div class="scene-footer">MADE WITH LOTS OF WISHES FOR MANSI ♡</div></section>
+<section class="scene" id="s2"><div class="eyebrow">today is all about you</div><div class="balloons" id="balloons"></div><h1 class="reveal-title">Happy Birthday,<br>Mansi! 🎂</h1><p class="reveal-title">Aaj ka din tumhari smile jitna hi special ho. 💗</p><img class="hero-art pose-celebrate" style="max-height:190px" src="assets/pose-happy.png" alt="Bear friends celebrating"><div class="controls"><button class="secondary" onclick="go(1)">← Back</button><button onclick="go(3)">See Your Wishes 🌸</button></div><div class="scene-footer">MADE WITH LOTS OF WISHES FOR MANSI ♡</div></section>
+<section class="scene" id="s3"><div class="progress" id="progress"></div><div class="eyebrow">wish <span id="wn">1</span> of 10</div><div class="wish-poster wish-theme-0" id="wishPoster"><div class="wish-decor" aria-hidden="true">♡ ✦ ♡</div><div class="wish-brush"><div class="memory-page-title" id="wh">Wish 1</div></div><div class="wish-message" id="wt"></div><img class="wish-illustration" id="wishArt" src="assets/pose-welcome.png" alt="Dudu and Bubu in a cute birthday-card pose"><div class="wish-bottom-decor" aria-hidden="true">✿  ✧  ♡</div></div><p class="subtle">Tap “Next Wish” when you're ready 💕</p><div class="controls"><button id="prevWish" onclick="changeWish(-1)">← Back</button><button id="nextWish" onclick="changeWish(1)">Next Wish ✨ →</button></div><div class="scene-footer">MADE WITH LOTS OF WISHES FOR MANSI ♡</div></section>
+<section class="scene memory-scene" id="s4"><div class="eyebrow">a tiny book of lovely moments</div><h2>Mansi’s Little Memory Book 💗</h2><div class="memory-book" id="memoryBook"><div class="memory-ribbon" aria-hidden="true">♡</div><div class="memory-cover-art" id="memoryCover"><div class="cover-spark cover-spark-a">✧</div><div class="cover-polaroid"><div class="cover-photo-placeholder">♡</div><span>a little moment</span></div><div class="cover-title">Mansi’s<br><em>Little Memory Book</em></div><div class="cover-subtitle">little things · lovely memories</div><div class="cover-doodles">✦　♡　✧</div><div class="cover-duo">Dudu &amp; Bubu ♡</div></div><div class="memory-inside" id="memoryInside" hidden><div class="memory-page-title" id="memoryTitle">A Little Welcome 🌷</div><div class="memory-photo" id="memoryPhoto"><span class="camera">♡</span><strong>Photo 1 of 10</strong><small>Your photo will go here later</small></div><p class="memory-message" id="memoryMessage">A little collection of moments, made just for you. 💗</p></div><div class="controls memory-controls"><button class="secondary" id="memoryBack" onclick="changeMemory(-1)">← Back</button><button id="memoryNext" onclick="changeMemory(1)">Open the Book 📖 →</button></div><div class="memory-progress"><span id="memoryCount">Tap to open your little book</span><div class="memory-hearts" id="memoryHearts" aria-label="Memory book progress">♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡</div></div></div><div class="scene-footer">MADE WITH LOTS OF WISHES FOR MANSI ♡</div></section>
+<section class="scene" id="s5"><div class="eyebrow">make a little wish</div><h2>Make a Wish, Mansi! ✨</h2><img class="scene-bears compact-bears pose-cake" src="assets/pose-cake.png" alt="Bear friends beside a birthday cake"><div class="cake-area" id="cake" role="button" tabindex="0" aria-label="Tap to blow out the birthday candles" onclick="blowCake()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();blowCake()}"><div class="cake-plate"></div><div class="candle"><i class="flame"></i></div><div class="candle"><i class="flame"></i></div><div class="candle"><i class="flame"></i></div><div class="cake-body"></div></div><p id="cakeText">Cake par tap karke candles blow karo 🎂</p><div class="controls"><button class="secondary" onclick="go(4)">← Back</button><button id="cakeNext" onclick="go(6)" disabled>Open Your Gift 🎁</button></div><div class="scene-footer">MADE WITH LOTS OF WISHES FOR MANSI ♡</div></section>
+<section class="scene" id="s6"><div class="eyebrow">one last little surprise</div><h2>A Gift For You 🎀</h2><img class="scene-bears compact-bears pose-gift" src="assets/pose-gift.png" alt="Bear friends with a birthday gift"><p>Gift box par tap karo…</p><div class="gift" id="gift" role="button" tabindex="0" aria-label="Open the birthday gift" onclick="openGift()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openGift()}"><div class="gift-box"></div><div class="gift-lid"></div><div class="gift-bow"></div></div><div id="giftNote" class="subtle">Something sweet is inside 💗</div><div class="controls"><button class="secondary" onclick="go(5)">← Back</button><button id="giftNext" onclick="go(7)" disabled>Open the Letter 💌</button></div><div class="scene-footer">MADE WITH LOTS OF WISHES FOR MANSI ♡</div></section>
+<section class="scene" id="s7"><div class="eyebrow">a little note from me</div><h2>Dear Mansi, 💗</h2><img class="scene-bears compact-bears pose-letter" src="assets/pose-hug.png" alt="Bear friends together"><div class="final-letter"><p>Pata nahi ek chhoti si website kitni happiness de sakti hai, par ise banane ka idea bas itna tha ki tumhara birthday thoda aur special ban sake.</p><p>Tumhari life mein hamesha khushiyan, achhe log aur aise moments aate rahein jinhe yaad karke tum smile karo.</p><p>Hamesha apni smile aur apni achhi wali self ko sambhal kar rakhna. Tumhare dreams poore hon aur aane wala har saal tumhare liye kuch beautiful lekar aaye.</p><p>I hope this little surprise made your day a little brighter. ✨</p><p><b>Happy Birthday, Mansi! 🎂</b><br>Made with love & lots of wishes 💗</p></div><div class="controls"><button class="secondary" onclick="go(6)">← Back</button><button onclick="go(8)">One Last Thing ✨</button></div><div class="scene-footer">MADE WITH LOTS OF WISHES FOR MANSI ♡</div></section>
+<section class="scene" id="s8"><button class="secret-star" onclick="showSecret()" aria-label="Reveal a tiny secret message">✦</button><div class="eyebrow">the end… and a new happy memory</div><img class="hero-art pose-ending" src="assets/pose-wave.png" alt="Bear friends waving goodbye"><h1>Hope This Made You Smile! 💗</h1><p>Mansi, tumhara birthday dher saari khushiyan aur beautiful memories lekar aaye. ✨</p><p class="subtle">Made with love & lots of wishes 💗</p><div id="secretMessage" class="secret-message">P.S. I hope life keeps giving you little reasons to smile, Mansi. Stay happy and keep being you. 💗</div><div class="controls"><button onclick="replayAsk()">Replay the Surprise ↻</button></div><div id="replay" style="display:none;margin-top:14px">Replay from the beginning?<div class="controls"><button onclick="replayYes()">Yes, replay 💗</button><button onclick="document.getElementById('replay').style.display='none'">Cancel</button></div></div><div class="scene-footer">MADE WITH LOTS OF WISHES FOR MANSI ♡</div></section>
+</main>
+
+<script>
+const wishes=[
+["Happy Birthday, Mansi! 🎂","Happy Birthday, Mansi! Tumhari life khushiyon aur beautiful memories se bhari rahe."],
+["Extra Happiness 💗","Aaj ke din extra smiles aur extra happiness tumhare naam!"],
+["Stay the Same ✨","Tumhari ye cute si aur masoom si nature hamesha aise hi bani rahe."],
+["Little Reasons to Smile 🌸","Dua hai tumhe roz koi na koi chhoti si baat khush kar de."],
+["Your Lovely Quality 🎀","Tum achhi ho, aur tumhari achhai tumhari ek lovely quality hai. Hamesha aise hi rehna!"],
+["Birthday Girl 😊","Birthday girl, smile karna mat bhoolna! Aaj toh smile karne ke extra reasons hain."],
+["Dream Big 🌟","Tumhare saare achhe dreams poore hon aur har naya din kuch achha lekar aaye."],
+["Enjoy Your Day 🎉","Aaj saari tension side mein! Cake khao, enjoy karo aur khoob saari memories banao."],
+["Always Be Yourself 💕","Life mein kitne bhi changes aayein, apni achhi wali self ko kabhi mat khona."],
+["A Beautiful New Year 🎁","Happy Birthday, Mansi! Tumhara ye naya year dher saari happiness aur unexpected achhe surprises lekar aaye."]
+];
+// Journey progress can be saved locally to offer a resume option.
+let scene=0,wish=0,envOpened=false,giftOpened=false,cakeBlown=false;
+// Progress is deliberately never saved: every page load begins at scene 1.
+const memoryPages=[
+{title:"Welcome to Our Little Book 🌷",photo:1,caption:"A little collection of moments, made just for you. 💗",kind:"welcome"},
+{title:"A Little Smile ✨",photo:2,caption:"Your photo’s little caption will be added when you share the picture."},
+{title:"Little Things to Remember 🎀",photo:3,caption:"Your photo’s little caption will be added when you share the picture."},
+{title:"A Sweet Little Moment 💕",photo:4,caption:"Your photo’s little caption will be added when you share the picture."},
+{title:"A Page Full of Sunshine 🌼",photo:5,caption:"Your photo’s little caption will be added when you share the picture."},
+{title:"A Memory to Keep 💗",photo:6,caption:"Your photo’s little caption will be added when you share the picture."},
+{title:"Little Joys, Big Smiles 🌸",photo:7,caption:"Your photo’s little caption will be added when you share the picture."},
+{title:"One for the Scrapbook 📖",photo:8,caption:"Your photo’s little caption will be added when you share the picture."},
+{title:"A Moment Just Like This ✨",photo:9,caption:"Your photo’s little caption will be added when you share the picture."},
+{title:"One Special Last Photo 🎂",photo:10,caption:"Your photo’s little caption will be added when you share the picture.",kind:"special"},
+{title:"Our Little Memories 💗",photo:0,caption:"Some moments are small, but they become lovely memories. Thank you for being part of this little birthday story. ✨",kind:"ending"}
+];
+// memoryPage -1 is the cover; 0–9 are the ten photo pages; 10 is the ending page.
+let memoryPage=-1;
+function renderMemory(){
+ const cover=document.getElementById('memoryCover'),inside=document.getElementById('memoryInside'),t=document.getElementById('memoryTitle'),m=document.getElementById('memoryMessage'),ph=document.getElementById('memoryPhoto'),b=document.getElementById('memoryBack'),n=document.getElementById('memoryNext'),c=document.getElementById('memoryCount'),hearts=document.getElementById('memoryHearts');
+ const coverMode=memoryPage===-1;
+ cover.hidden=!coverMode;inside.hidden=coverMode;
+ b.disabled=coverMode;
+ if(coverMode){n.textContent='Open the Book 📖 →';c.textContent='Tap to open your little book';hearts.textContent='♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡';hearts.setAttribute('aria-label','Memory book not opened yet');return;}
+ const page=memoryPages[memoryPage];
+ if(page.kind==='ending'){
+  t.textContent=page.title;ph.innerHTML='<span class="camera">✧</span><strong>Our Little Memories</strong><small>A little book made with birthday wishes</small>';ph.style.borderBottomWidth='9px';m.textContent=page.caption;
+ }else{
+  t.textContent=page.title;ph.style.borderBottomWidth='27px';ph.innerHTML='<span class="camera">♡</span><strong>Photo '+page.photo+' of 10</strong><small>Empty photo space · add your picture later</small>';m.textContent=page.caption;
+ }
+ n.textContent=memoryPage===10?'Continue to the Birthday Cake 🎂':'Next Page 📖 →';
+ c.textContent=page.kind==='ending'?'The last page · 10 photos collected':('Photo '+page.photo+' of 10');
+ hearts.innerHTML=Array.from({length:10},(_,i)=>'<span class="'+(i<Math.min(memoryPage+1,10)?'done':'')+'">'+(i<Math.min(memoryPage+1,10)?'♥':'♡')+'</span>').join(' ');
+ hearts.setAttribute('aria-label','Viewed '+Math.min(memoryPage+1,10)+' of 10 photo pages');
+}
+function changeMemory(d){
+ if(d>0){if(memoryPage===-1){memoryPage=0;renderMemory();return;}if(memoryPage===10){go(5);return;}memoryPage++;}
+ else{if(memoryPage===-1)return;if(memoryPage===0){memoryPage=-1;renderMemory();return;}memoryPage--;}
+ renderMemory();
+ try{localStorage.setItem('mansiV18Progress',JSON.stringify({scene:4,wish:wish,memory:memoryPage}));}catch(e){}
+}
+function unlockGate(){const code=document.getElementById('passcode').value;if(code!=='5201314'){document.getElementById('gateError').textContent='That code didn’t open it. Try again 💗';document.getElementById('passcode').value='';return;}document.getElementById('gateError').textContent='';let saved=null;try{saved=JSON.parse(localStorage.getItem('mansiV18Progress')||'null');}catch(e){}document.getElementById('passForm').hidden=true;if(saved&&Number.isInteger(saved.scene)&&saved.scene>0){document.getElementById('resumeBox').hidden=false;}else{resumeJourney(false);}}
+function resumeJourney(yes){let saved=null;try{saved=JSON.parse(localStorage.getItem('mansiV18Progress')||'null');}catch(e){}document.getElementById('gate').hidden=true;document.body.classList.remove('locked');document.querySelector('.journey-bar').style.visibility='visible';document.getElementById('app').style.visibility='visible';document.getElementById('passForm').hidden=false;document.getElementById('resumeBox').hidden=true;document.getElementById('passcode').value='';if(yes&&saved){wish=Math.max(0,Math.min(9,saved.wish||0));memoryPage=Number.isInteger(saved.memory)?Math.max(-1,Math.min(10,saved.memory)):-1;go(Math.max(0,Math.min(8,saved.scene||0)));}else{try{localStorage.removeItem('mansiV18Progress');}catch(e){}replayYes();}}
+function updateCountdown(){const target=new Date(2026,10,13,0,0,0).getTime(),now=Date.now(),diff=Math.max(0,target-now);document.getElementById('cdDays').textContent=Math.floor(diff/86400000);document.getElementById('cdHours').textContent=Math.floor(diff%86400000/3600000);document.getElementById('cdMinutes').textContent=Math.floor(diff%3600000/60000);document.getElementById('cdSeconds').textContent=Math.floor(diff%60000/1000);if(diff===0)document.querySelector('.gate-sub').textContent='It’s your birthday, Mansi! Let the magic begin 💗';}
+function showSecret(){document.getElementById('secretMessage').classList.toggle('show');}
+function go(n){
+  document.querySelectorAll('.scene').forEach(x=>x.classList.remove('active'));
+  scene=n;
+  const target=document.getElementById('s'+n);
+  target.classList.add('active');
+  const count=document.getElementById('sceneCount');
+  if(count) count.textContent=String(n+1).padStart(2,'0')+' / 09';
+  const fill=document.getElementById('journeyFill');
+  if(fill) fill.style.width=((n+1)/9*100)+'%';
+  const progress=document.getElementById('journeyProgress');
+  if(progress) progress.setAttribute('aria-valuenow',String(n+1));
+  if(n===1&&envOpened){document.getElementById('env').classList.add('open');document.getElementById('envNext').disabled=false;}
+  if(n===2){startBalloons();target.querySelectorAll('.reveal-title').forEach(el=>{el.style.animation='none';void el.offsetWidth;el.style.animation='';});}
+  if(n===3)renderWish();
+  if(n===4)renderMemory();
+  if(n===5&&cakeBlown){document.getElementById('cake').classList.add('blown');document.getElementById('cakeText').textContent='Yay! Wish made! May all your good dreams come true 💗';}
+  if(n===6&&giftOpened){document.getElementById('gift').classList.add('open');document.getElementById('giftNext').disabled=false;document.getElementById('giftNote').textContent='A little letter is waiting for you 💌';}
+  if(n===0||n===2||n===8)floatSparks();
+  try{localStorage.setItem('mansiV18Progress',JSON.stringify({scene:n,wish: wish, memory:memoryPage}));}catch(e){}
+  window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+}
+function openEnv(){if(envOpened)return;envOpened=true;document.getElementById('env').classList.add('open');document.getElementById('envNext').disabled=false;floatSparks()}
+function startBalloons(){let host=document.getElementById('balloons');host.innerHTML='';const colors=['#ff9bc5','#c9b9ff','#ffd76e','#9edfd4','#f5a8a8','#d8c0ff'];for(let i=0;i<9;i++){let b=document.createElement('div');b.className='balloon';b.style.setProperty('--x',(4+i*11)+'%');b.style.setProperty('--c',colors[i%colors.length]);b.style.setProperty('--delay',(i*.13)+'s');host.appendChild(b)}setTimeout(floatSparks,700)}
+function renderWish(){
+  const poster=document.getElementById('wishPoster');
+  const art=document.getElementById('wishArt');
+  const poses=['pose-welcome.png','pose-happy.png','pose-excited.png','pose-curious.png','pose-wave.png','pose-envelope.png','pose-hug.png','pose-cake.png','pose-letter.png','pose-gift.png'];
+  document.getElementById('wn').textContent=wish+1;
+  document.getElementById('wh').textContent='Wish '+(wish+1);
+  document.getElementById('wt').textContent=wishes[wish][1];
+  poster.className='wish-poster wish-theme-'+wish;
+  art.src='assets/'+poses[wish];
+  art.alt='Dudu and Bubu in a unique flat 2D pose for wish '+(wish+1);
+  document.getElementById('prevWish').disabled=wish===0;
+  document.getElementById('nextWish').textContent=wish===wishes.length-1?'Finish Wishes ✨ →':'Next Wish ✨ →';
+  document.getElementById('progress').innerHTML=wishes.map((_,i)=>`<span class="${i<=wish?'done':''}">♥</span>`).join('');
+  art.style.animation='none';void art.offsetWidth;art.style.animation='';
+}
+function changeWish(d){if(d<0){if(wish===0)return;wish--;renderWish();return;}if(wish===wishes.length-1){const b=document.getElementById('wb');b.classList.add('pop');floatSparks();setTimeout(()=>go(4),280);return;}wish++;const b=document.getElementById('wb');b.classList.add('pop');setTimeout(renderWish,280);}
+function blowCake(){if(cakeBlown)return;cakeBlown=true;document.getElementById('cake').classList.add('blown');document.getElementById('cakeText').textContent='Yay! Wish made! May all your good dreams come true 💗';document.getElementById('cakeNext').disabled=false;confetti()}
+function openGift(){if(giftOpened)return;giftOpened=true;document.getElementById('gift').classList.add('open');document.getElementById('giftNote').textContent='A little letter is waiting for you 💌';document.getElementById('giftNext').disabled=false;floatSparks()}
+function replayAsk(){document.getElementById('replay').style.display='block'}
+function replayYes(){scene=0;wish=0;memoryPage=-1;envOpened=false;giftOpened=false;cakeBlown=false;document.getElementById('env').classList.remove('open');document.getElementById('envNext').disabled=true;document.getElementById('gift').classList.remove('open');document.getElementById('giftNext').disabled=true;document.getElementById('cake').classList.remove('blown');document.getElementById('cakeNext').disabled=true;document.getElementById('cakeText').textContent='Cake par tap karke candles blow karo 🎂';document.getElementById('replay').style.display='none';go(0)}
+function floatSparks(){for(let i=0;i<16;i++){let s=document.createElement('span');s.className='spark';s.textContent=['✦','♡','✨','✧'][Math.floor(Math.random()*4)];s.style.left=Math.random()*100+'vw';s.style.bottom='-25px';s.style.setProperty('--dx',(Math.random()*160-80)+'px');s.style.setProperty('--size',(12+Math.random()*18)+'px');document.body.appendChild(s);setTimeout(()=>s.remove(),2600)}}
+function confetti(){for(let i=0;i<45;i++){let c=document.createElement('span');c.className='spark';c.textContent=['🎉','✨','💗','🌸'][i%4];c.style.left=(Math.random()*100)+'vw';c.style.bottom='20vh';c.style.setProperty('--dx',(Math.random()*260-130)+'px');c.style.setProperty('--size',(12+Math.random()*15)+'px');document.body.appendChild(c);setTimeout(()=>c.remove(),2600)}}
+// The passcode gate is the only visible screen until the correct code is entered.
+scene=0;wish=0;memoryPage=-1;envOpened=false;giftOpened=false;cakeBlown=false;
+document.body.classList.add('locked');document.getElementById('gate').hidden=false;
+document.getElementById('app').style.visibility='hidden';document.querySelector('.journey-bar').style.visibility='hidden';
+document.querySelectorAll('.scene').forEach(x=>x.classList.remove('active'));document.getElementById('s0').classList.add('active');
+document.getElementById('sceneCount').textContent='01 / 09';document.getElementById('journeyFill').style.width=(100/9)+'%';document.getElementById('journeyProgress').setAttribute('aria-valuenow','1');
+updateCountdown();setInterval(updateCountdown,1000);
+</script></body></html>
